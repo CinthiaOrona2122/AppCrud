@@ -34,7 +34,7 @@ app.UseAuthorization();
 //pagina de inicio
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+    pattern: "{controller=Empleado}/{action=Lista}/{id?}");
 
 //arranque
 app.Run();

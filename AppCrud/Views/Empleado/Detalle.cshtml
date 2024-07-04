@@ -1,0 +1,28 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model AppCrud.Models.Empleado;
+
+<div class="row">
+    <div class="col-sm-8 offset-sm-2">
+        <h2>Detalle Empleado</h2>
+
+        <div class="container">
+            <input type="hidden" asp-for="IdEmpleado" />
+            <div class="card" style="width: 30rem;">
+                <div class="card-body">
+                    <h5 class="card-title">@Model.NombreCompleto</h5>
+                    <p class="card-text">@Model.Correo</p>
+                    <p class="card-text">@Model.FechaContrato.ToShortDateString()</p>
+                    <p class="card-text">@Model.Activo</p>
+                    <a class="btn btn-primary">Ir a algún lugar</a>
+                </div>
+            </div>
+            <div class="mb-3">
+                <a asp-controller="Empleado" asp-action="Lista" class="btn btn-warning">Volver</a>
+            </div>
+        </div>
+    </div>
+</div>
